@@ -12,64 +12,31 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 0.75fr 0.5fr 0.75fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "projects projects . navBar";
-  position: absolute;
-  left: 20%;
-  bottom: 15%;
-  width: 60%;
-  height: 70%;
-}
-
-.projects {
-  grid-area: projects;
-  display: grid;
-  grid-template-columns: 0.1fr 1fr 0.1fr 1fr 0.1fr;
-  grid-template-rows: 0.25fr 1fr 0.25fr 1fr 0.25fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr 3fr 0.5fr;
   grid-template-areas:
-    ". . . . ."
-    ". project1 . project2 ."
-    ". . . . ."
-    ". project3 project3 project3 ."
-    ". . . . .";
-  border-radius: 20px;
-  background: #d8d2cb;
-}
-
-.project1 {
-  grid-area: project1;
-  background: #eeeeee;
-  border-radius: 20px;
-}
-
-.project2 {
-  grid-area: project2;
-  background: #eeeeee;
-  border-radius: 20px;
-}
-
-.project3 {
-    grid-area: project3;
-    background: #eeeeee;
-    border-radius: 20px;
+    "navBar"
+    "."
+    "projects"
+    ".";
+  position: absolute;
+  left: 12.5%;
+  bottom: 15%;
+  width: 75%;
+  height: 70%;
 }
 
 .navBar {
   grid-area: navBar;
   display: grid;
-  grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-rows: 2fr 0.75fr 1fr 0.75fr 2fr;
-  grid-template-areas:
-    ". . ."
-    ". nav1 ."
-    ". . ."
-    ". nav2 ."
-    ". . .";
+  grid-template-columns: 0.5fr 0.75fr 0.5fr 0.75fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". nav1 . nav2 .";
   position: relative;
   border-radius: 20px;
   background: #d8d2cb;
   text-align: center;
+  padding: 3%;
 }
 
 .nav {
@@ -77,6 +44,7 @@ body {
   border-radius: 20px;
   display: flex;
   justify-content: center;
+  padding: 10%;
 }
 
 a {
@@ -90,4 +58,112 @@ a {
 
 .nav2 {
   grid-area: nav2;
+}
+
+.projects {
+  grid-area: projects;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr 1fr 0.1fr;
+  grid-template-rows: 0.1fr 1fr 0.1fr 1fr 0.1fr;
+  grid-template-areas:
+    ". . . . ."
+    ". project1 . project2 ."
+    ". . . . ."
+    ". project3 . project4 ."
+    ". . . . .";
+  border-radius: 20px;
+  background: #d8d2cb;
+}
+
+.project1 {
+  grid-area: project1;
+  background: #eeeeee;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.5fr 0.4fr 0.1fr 0.1fr;
+  grid-template-areas:
+    "title"
+    "pic"
+    "description"
+    "link"
+    ".";
+}
+
+.project2 {
+  grid-area: project2;
+  background: #eeeeee;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.5fr 0.4fr 0.1fr 0.1fr;
+  grid-template-areas:
+    "title"
+    "pic"
+    "description"
+    "link"
+    ".";
+}
+
+.project3 {
+  grid-area: project3;
+  background: #eeeeee;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.5fr 0.4fr 0.1fr 0.1fr;
+  grid-template-areas:
+    "title"
+    "pic"
+    "description"
+    "link"
+    ".";
+}
+
+.project4 {
+  grid-area: project4;
+  background: #eeeeee;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.5fr 0.4fr 0.1fr 0.1fr;
+  grid-template-areas:
+    "title"
+    "pic"
+    "description"
+    "link"
+    ".";
+}
+
+.title {
+  grid-area: title;
+}
+
+.pic {
+  grid-area: pic;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  grid-area: description;
+  text-align: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  padding: 2%;
+}
+
+.link {
+  grid-area: link;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
