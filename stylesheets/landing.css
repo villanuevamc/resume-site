@@ -35,7 +35,6 @@ body {
   position: relative;
   border-radius: 20px;
   background: #d8d2cb;
-  text-align: center;
   padding: 3%;
 }
 
@@ -67,7 +66,7 @@ a {
   grid-template-rows: 0.1fr 1fr 0.1fr 1fr 0.1fr;
   grid-template-areas:
     ". . . . ."
-    ". videoIntro . pic ."
+    ". pic . videoIntro ."
     ". . . . ."
     ". bio . contact ."
     ". . . . .";
@@ -75,15 +74,24 @@ a {
   background: #d8d2cb;
 }
 
-.videoIntro {
-  grid-area: videoIntro;
-  background: #eeeeee;
-  border-radius: 20px;
-}
-
 .pic {
   grid-area: pic;
-  background: #eeeeee;
+}
+
+img {
+  grid-area: pic;
+  border-radius: 20px;
+  width: 75%;
+  padding-top: 1%;
+}
+
+.videoIntro {
+  grid-area: videoIntro;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 20px;
 }
 
@@ -98,10 +106,12 @@ a {
   grid-area: bio;
   background: #eeeeee;
   border-radius: 20px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 p {
   display: flex;
   justify-content: center;
+  padding: 2%;
+  text-align: left;
 }
