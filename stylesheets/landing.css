@@ -12,27 +12,64 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 0.75fr 0.5fr 0.75fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "aboutMe aboutMe . navBar";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr 3fr 0.5fr;
+  grid-template-areas:
+    "navBar"
+    "."
+    "aboutMe"
+    ".";
   position: absolute;
-  left: 20%;
+  left: 12.5%;
   bottom: 15%;
-  width: 60%;
+  width: 75%;
   height: 70%;
+}
+
+.navBar {
+  grid-area: navBar;
+  display: grid;
+  grid-template-columns: 0.5fr 0.75fr 0.5fr 0.75fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". nav1 . nav2 .";
+  position: relative;
+  border-radius: 20px;
+  background: #d8d2cb;
+  text-align: center;
+  padding: 3%;
+}
+
+.nav {
+  background: #1c658c;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+}
+
+a {
+  display: block;
+  margin: auto;
+}
+
+.nav1 {
+  grid-area: nav1;
+}
+
+.nav2 {
+  grid-area: nav2;
 }
 
 .aboutMe {
   grid-area: aboutMe;
   display: grid;
   grid-template-columns: 0.1fr 1fr 0.1fr 1fr 0.1fr;
-  grid-template-rows: 0.25fr 1fr 1fr 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.1fr 1fr 0.1fr 1fr 0.1fr;
   grid-template-areas:
     ". . . . ."
     ". videoIntro . pic ."
-    ". videoIntro . contact ."
     ". . . . ."
-    ". bio bio bio ."
+    ". bio . contact ."
     ". . . . .";
   border-radius: 20px;
   background: #d8d2cb;
@@ -67,41 +104,4 @@ body {
 p {
   display: flex;
   justify-content: center;
-}
-
-.navBar {
-  grid-area: navBar;
-  display: grid;
-  grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-rows: 2fr 0.75fr 1fr 0.75fr 2fr;
-  grid-template-areas:
-    ". . ."
-    ". nav1 ."
-    ". . ."
-    ". nav2 ."
-    ". . .";
-  position: relative;
-  border-radius: 20px;
-  background: #d8d2cb;
-  text-align: center;
-}
-
-.nav {
-  background: #1c658c;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-a {
-  display: block;
-  margin: auto;
-}
-
-.nav1 {
-  grid-area: nav1;
-}
-
-.nav2 {
-  grid-area: nav2;
 }
