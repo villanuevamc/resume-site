@@ -48,6 +48,14 @@ body {
   text-decoration: none;
 }
 
+.nav a:link, .nav a:visited {
+  color: white;
+}
+
+.nav a:hover, .nav a:active {
+  color: lightblue;
+}
+
 .nav1 {
   grid-area: nav1;
 }

@@ -48,6 +48,14 @@ body {
   text-decoration: none;
 }
 
+.nav a:link, .nav a:visited {
+  color: white;
+}
+
+.nav a:hover, .nav a:active {
+  color: lightblue;
+}
+
 .nav1 {
   grid-area: nav1;
 }
@@ -157,9 +165,20 @@ p {
   padding: 2%;
 }
 
-.link {
+.github {
   grid-area: link;
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  padding: 3%;
+  text-decoration: none;
+  background-color: #1c658c;
+}
+
+.github:link, .github:visited {
+  color: white;
+}
+
+.github:hover, .github:active {
+  color: lightblue;
 }
