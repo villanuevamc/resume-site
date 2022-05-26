@@ -38,17 +38,14 @@ body {
   padding: 3%;
 }
 
-.nav {
-  background: #1c658c;
+.nav a {
+  background-color: #1c658c;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
   padding: 10%;
-}
-
-a {
-  display: block;
-  margin: auto;
+  padding-left: 30%;
+  padding-right: 30%;
+  text-decoration: none;
 }
 
 .nav1 {
