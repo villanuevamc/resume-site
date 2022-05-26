@@ -46,11 +46,6 @@ body {
   padding: 10%;
 }
 
-.contact a {
-  display: block;
-  margin: auto;
-}
-
 .nav1 {
   grid-area: nav1;
 }
@@ -101,6 +96,12 @@ img {
   display: block;
   margin: auto;
   padding-bottom: 5%;
+}
+
+
+.contact a {
+  display: block;
+  margin: auto;
 }
 
 .bio {
