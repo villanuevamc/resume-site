@@ -46,7 +46,7 @@ body {
   padding: 10%;
 }
 
-a {
+.contact a {
   display: block;
   margin: auto;
 }
@@ -100,6 +100,7 @@ img {
   padding-top: 5%;
   display: block;
   margin: auto;
+  padding-bottom: 5%;
 }
 
 .bio {
@@ -109,9 +110,14 @@ img {
   font-size: 18px;
 }
 
-p {
+.bio-text {
   display: flex;
   justify-content: center;
   padding: 2%;
   text-align: left;
+}
+
+.license {
+  font-size: 10px;
+  text-align: right;
 }
